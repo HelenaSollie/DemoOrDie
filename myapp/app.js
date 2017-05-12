@@ -56,7 +56,7 @@ app.get('/', function(req, res) {
   });
 
 app.get('/login', function(req, res){
-    res.render('login', { title: 'KV app' });
+    res.render('login', { title: 'Demo or die' });
   });
 
 app.get('/login/facebook', passport.authenticate('facebook'));
@@ -71,7 +71,6 @@ app.get('/profile', require('connect-ensure-login').ensureLoggedIn(), function(r
 
 
 
-app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
