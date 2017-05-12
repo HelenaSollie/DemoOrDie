@@ -4,8 +4,9 @@ block content
     div.container
         div.head
             h1= title
-            a(href='/') Go back
-        p
-            a(href="/login/facebook") Log in with Facebook
+
+        div.loginBtns
+            a#fblogin(href="/login/facebook") Log in with Facebook
             |    or
-            a(href="/adminlogin") sign in as admin
+            a#adminlogin(href="/adminlogin") Sign in as Admin
+            a#goback(href='/') Go back

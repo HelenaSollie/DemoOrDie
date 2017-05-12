@@ -2,19 +2,59 @@ body {
     padding: 0;
     margin: 0;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: #9ab9ed ;
 }
 
+
 a {
-    color: #00B7FF;
+    color: #ed9aa9;
+    background-color: white;
+    padding: 5%;
+    font-size: 2em;
+    margin-top: 50px;
+    text-decoration: none;
+    margin-left: 32.5%;
+    border-radius: 10px;
 }
-h1{
-    font-size: 3em;
+
+#startBtn {
+
+    background-color: #ed9aa9;
+    color: white;
+    margin-left: 37.5%;
+}
+
+.loginBtns {
+
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-left: 5%;
+}
+
+.loginBtns a {
+
+    font-size: 2.5em;
     text-align: center;
-    width: 100%;
+}
+
+#goback {
+    background-color: #ed9aa9;
+    color: white;
+}
+
+h1 {
+    font-size: 14em;
+    text-align: center;
+    color: white;
+    width: 60%;
+    margin-left: 20%;
     text-transform: uppercase;
     margin-top: 200px;
 }
-.footer{
+
+.footer
+{
     background-color: black;
     color: white;
     padding: 0.5em;
@@ -26,9 +66,50 @@ h1{
 .container p{
     text-align: center;
 }
-nav{
+
+nav {
+
     width: 100%;
-    background-color: darkslateblue;
     height: 50px;
 
+}
+
+
+.adminLogin h1 {
+
+    font-size: 8em;
+}
+
+.adminLogin p {
+    width: 80%;
+    margin-left: 10%;
+    color: white;
+    font-size: 2em;
+}
+
+.adminForm {
+
+    width: 100%;
+    margin-left: 15%;
+    font-size: 3em;
+
+}
+
+
+
+.form-input {
+
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input input {
+    width: 60%;
+    padding: 5%;
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.form-input label {
+    color: #ed9aa9 ;
 }
