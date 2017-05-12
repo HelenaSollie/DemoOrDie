@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    div.container
+        div.head
+            h1= title
+            a(href='/') Go back
+        p
+            a(href="/login/facebook") Log in with Facebook
+            |    or
+            a(href="/adminlogin") sign in as admin

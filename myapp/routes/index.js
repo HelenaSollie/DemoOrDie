@@ -3,19 +3,32 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Demo or Die' });
+  res.render('home', { title: 'KV App' });
 });
-router.get('/choosegroups', function(req, res, next){
-    res.render("chooseGroups");
+
+router.get('/login', function (req, res, next) {
+   res.render('login');
 });
-router.get('/profile', function(req, res, next){
-    res.render("profile");
+
+router.get('/home', function (req, res, next) {
+   res.render('home');
 });
-router.get('/vote', function(req, res, next){
-    res.render("vote");
+
+router.get('/profile', function (req, res, next) {
+   res.render('profile');
 });
-router.get('/adminview', function(req, res, next){
-    res.render("adminView");
+
+router.get('/chooseGroups', function (req, res, next) {
+    res.render('chooseGroups');
 });
+
+router.get('/adminView', function (req, res, next) {
+    res.render('adminView');
+});
+
+router.get('/adminlogin', function(req, res, next) {
+  res.render('adminlogin', { title: 'KV App | Admin Log In' });
+});
+
 
 module.exports = router;

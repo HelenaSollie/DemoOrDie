@@ -1,4 +1,8 @@
 extends layout
 
 block content
-    h2 Profile
+    div.container
+        h1= title
+
+        p pic: #{user.pictures}
+        p #{user.displayName}

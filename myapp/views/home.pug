@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    div.container
+        if (!user)
+            h1 KV APP log in
+            div
+                a.login-btn(href="/login") sign in
+        else
+            p Hello, #{user.displayName}. View your  
+                a(href="/profile") profile
