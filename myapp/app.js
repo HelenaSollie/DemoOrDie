@@ -4,29 +4,22 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var OAuth2Strategy = require('passport-oauth2');
 var passport = require('passport');
-var Strategy = require('passport-facebook').Strategy;
+var fbAuth = require('./authentication.js');
+var User = require('./user.js');
+var mongoose = require('mongoose');
+var config = require('./oauth.js')
 
 var index = require('./routes/index');
-var users = require('./routes/users');
-//var login = require('./login');
+mongoose.connect('mongodb://127.0.0.1/demoordie');
 
-passport.use(new Strategy({
-    clientID: '232902227192377',
-    clientSecret: '0036c0c633e2bbe8e8fe71b520da191e',
-    callbackURL: 'http://localhost:3000/login/facebook/return'
-  },
-  function(accessToken, refreshToken, profile, cb) {
-    return cb(null, profile);
-  }));
 
 passport.serializeUser(function(user, cb) {
-  cb(null, user);
+    cb(null, user);
 });
 
 passport.deserializeUser(function(obj, cb) {
-  cb(null, obj);
+    cb(null, obj);
 });
 
 
@@ -53,21 +46,21 @@ app.use(passport.session());
 // Define routes.
 app.get('/', function(req, res) {
     res.render('home', { user: req.user });
-  });
+});
 
 app.get('/login', function(req, res){
     res.render('login', { title: 'Demo or die' });
-  });
+});
 
 app.get('/login/facebook', passport.authenticate('facebook'));
 
 app.get('/login/facebook/return', passport.authenticate('facebook', { failureRedirect: '/login' }), function(req, res) {
     res.redirect('/');
-  });
+});
 
 app.get('/profile', require('connect-ensure-login').ensureLoggedIn(), function(req, res){
     res.render('profile', { user: req.user });
-  });
+});
 
 
 
@@ -78,27 +71,23 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
 });
 
 // error handler
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+    // set locals, only providing error in development
+    res.locals.message = err.message;
+    res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+    // render the error page
+    res.status(err.status || 500);
+    res.render('error');
 });
 
 module.exports = app;
-
-
-
