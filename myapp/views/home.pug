@@ -3,9 +3,9 @@ extends layout
 block content
     div.container
         if (!user)
-            h1 KV APP log in
+            h1 Demo or Die
             div
-                a.login-btn(href="/login") sign in
+                a#startBtn(href="/login") Get started
         else
             p Hello, #{user.name}. View your
                 a(href="/profile") profile

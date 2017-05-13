@@ -1,20 +1,63 @@
-body {
-    padding: 0;
-    margin: 0;
+.container {
+    display: block;
+    min-width:300px;
+    max-width: 850px;
+    height: 100vh;
+    margin: 0 auto;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: #9ab9ed ;
+    margin-top: -120px;
 }
 
+
 a {
-    color: #00B7FF;
+    color: #ed9aa9;
+    background-color: white;
+    padding: 2%;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 10px;
 }
-h1{
-    font-size: 3em;
+
+#startBtn {
+
+    background-color: #ed9aa9;
+    color: white;
+    margin-left: 41.5%;
+}
+
+.loginBtns {
+
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+}
+
+.loginBtns a {
+
     text-align: center;
-    width: 100%;
-    text-transform: uppercase;
-    margin-top: 200px;
+    width: 50%;
+    margin-left: 20%;
 }
-.footer{
+
+#goback {
+    background-color: #ed9aa9;
+    color: white;
+}
+
+h1 {
+    font-size: 6.5em;
+    text-align: center;
+    color: white;
+    width: 30%;
+    margin-left: 35%;
+    padding-top: 150px;
+    text-transform: uppercase;
+}
+
+.footer
+{
     background-color: black;
     color: white;
     padding: 0.5em;
@@ -26,9 +69,82 @@ h1{
 .container p{
     text-align: center;
 }
-nav{
+
+nav {
+
     width: 100%;
-    background-color: darkslateblue;
     height: 50px;
 
+}
+
+
+.adminLogin h1 {
+
+    font-size: 4em;
+}
+
+.adminLogin p {
+    width: 50%;
+    margin-left: 25%;
+    color: white;
+    font-size: 1em;
+}
+
+.adminForm {
+
+    width: 100%;
+    font-size: 1.5em;
+
+}
+
+.form-input {
+
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input input {
+    width: 50%;
+    margin-left: 20.5%;
+    padding: 2%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1em;
+    color: white;
+    border: 1px solid #ed9aa9;
+    border-radius: 10px;
+    background-color: #ed9aa9;
+
+}
+
+.form-input input::-webkit-input-placeholder {
+
+    color: white;
+}
+
+.form-input label {
+    color: white ;
+    margin-left: 20.5%;
+}
+
+#loginbtn {
+
+    color: white;
+    background-color: #ed9aa9 ;
+    padding: 2%;
+    font-size: 1em;
+    margin-top: 20px;
+    margin-left: 30%;
+    margin-right: 50px;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 1px solid transparent;
+
+}
+
+.adminForm #goback {
+
+    background-color: white;
+    color: #ed9aa9;
+    font-size: 1em;
 }
