@@ -1,19 +1,22 @@
-body {
-    padding: 0;
-    margin: 0;
+.container {
+    display: block;
+    min-width:300px;
+    max-width: 850px;
+    height: 100vh;
+    margin: 0 auto;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
     background-color: #9ab9ed ;
+    margin-top: -120px;
 }
 
 
 a {
     color: #ed9aa9;
     background-color: white;
-    padding: 5%;
-    font-size: 2em;
-    margin-top: 50px;
+    padding: 2%;
+    font-size: 1.5em;
+    margin-top: 20px;
     text-decoration: none;
-    margin-left: 32.5%;
     border-radius: 10px;
 }
 
@@ -21,21 +24,21 @@ a {
 
     background-color: #ed9aa9;
     color: white;
-    margin-left: 37.5%;
+    margin-left: 41.5%;
 }
 
 .loginBtns {
 
     display: flex;
     flex-direction: column;
-    width: 70%;
     margin-left: 5%;
 }
 
 .loginBtns a {
 
-    font-size: 2.5em;
     text-align: center;
+    width: 50%;
+    margin-left: 20%;
 }
 
 #goback {
@@ -44,13 +47,13 @@ a {
 }
 
 h1 {
-    font-size: 14em;
+    font-size: 6.5em;
     text-align: center;
     color: white;
-    width: 60%;
-    margin-left: 20%;
+    width: 30%;
+    margin-left: 35%;
+    padding-top: 150px;
     text-transform: uppercase;
-    margin-top: 200px;
 }
 
 .footer
@@ -77,25 +80,22 @@ nav {
 
 .adminLogin h1 {
 
-    font-size: 8em;
+    font-size: 4em;
 }
 
 .adminLogin p {
-    width: 80%;
-    margin-left: 10%;
+    width: 50%;
+    margin-left: 25%;
     color: white;
-    font-size: 2em;
+    font-size: 1em;
 }
 
 .adminForm {
 
     width: 100%;
-    margin-left: 15%;
-    font-size: 3em;
+    font-size: 1.5em;
 
 }
-
-
 
 .form-input {
 
@@ -104,12 +104,47 @@ nav {
 }
 
 .form-input input {
-    width: 60%;
-    padding: 5%;
-    margin-top: 10px;
-    font-size: 1.2em;
+    width: 50%;
+    margin-left: 20.5%;
+    padding: 2%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1em;
+    color: white;
+    border: 1px solid #ed9aa9;
+    border-radius: 10px;
+    background-color: #ed9aa9;
+
+}
+
+.form-input input::-webkit-input-placeholder {
+
+    color: white;
 }
 
 .form-input label {
-    color: #ed9aa9 ;
+    color: white ;
+    margin-left: 20.5%;
+}
+
+#loginbtn {
+
+    color: white;
+    background-color: #ed9aa9 ;
+    padding: 2%;
+    font-size: 1em;
+    margin-top: 20px;
+    margin-left: 30%;
+    margin-right: 50px;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 1px solid transparent;
+
+}
+
+.adminForm #goback {
+
+    background-color: white;
+    color: #ed9aa9;
+    font-size: 1em;
 }

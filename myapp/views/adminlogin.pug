@@ -9,10 +9,10 @@ block content
             form.admin-login(method='#')
                 div.form-input
                     label(for='name') Name
-                    input(name='name', type='text', autofocus='')
+                    input(name='name', type='text', autofocus='', placeholder='Your name here...')
                 div.form-input
                     label(for='password') Password
-                    input(name='password', type='password')
-                button.login-btn(type='submit') Log in
+                    input(name='password', type='password', placeholder='And the right password over here.')
 
-                a.login-btn(href='/login') Go back
+                button#loginbtn(type='submit') Log in
+                a#goback(href='/login') Go back
