@@ -79,7 +79,7 @@ nav {
 
 
 .adminLogin h1 {
-
+    padding-top: -100px;
     font-size: 4em;
 }
 
@@ -148,3 +148,22 @@ nav {
     color: #ed9aa9;
     font-size: 1em;
 }
+
+
+#welcomeProfile {
+
+    color: white;
+    padding-top: 200px;
+    width: 60%;
+    margin-left: 20%;
+    font-size: 3em;
+
+}
+
+#linkProfile {
+
+    color: white;
+    font-size:1.5em;
+    padding-top: 100px;
+}
+

@@ -7,5 +7,6 @@ block content
             div
                 a#startBtn(href="/login") Get started
         else
-            p Hello, #{user.displayName}. View your  
-                a(href="/profile") profile
+            p#welcomeProfile Hello, #{user.displayName} !
+            p#linkProfile Go to
+            a#linkProfile(href="/profile") profile
