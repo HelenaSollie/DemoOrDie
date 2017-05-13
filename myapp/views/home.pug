@@ -8,5 +8,7 @@ block content
                 a#startBtn(href="/login") Get started
         else
             p#welcomeProfile Hello, #{user.name} !
-            p#linkProfile Go to
-            a#linkProfile(href="/profile") profile
+            
+            div#linksProfile
+            a#linkProfile(href="/profile") Go to profile
+            a#linkTryAgain(href="/login") That's not me!

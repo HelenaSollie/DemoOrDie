@@ -150,20 +150,28 @@ nav {
 }
 
 
+
 #welcomeProfile {
 
     color: white;
     padding-top: 200px;
     width: 60%;
     margin-left: 20%;
+    margin-bottom: 100px;
     font-size: 3em;
 
 }
 
 #linkProfile {
 
-    color: white;
+    color: #ed9aa9;
+    padding: 2%;
     font-size:1.5em;
-    padding-top: 100px;
+    margin-left: 25%;
+}
+
+#linkTryAgain {
+
+    margin-left: 50px;
 }
 
