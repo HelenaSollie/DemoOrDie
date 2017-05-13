@@ -3,6 +3,6 @@ extends layout
 block content
     div.container
         h1= title
-
-        p pic: #{user.pictures}
+        
+        img(src= user.picture)
         p #{user.name}

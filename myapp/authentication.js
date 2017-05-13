@@ -6,8 +6,10 @@ var config = require('./oauth.js');
 module.exports = passport.use(new FacebookStrategy({
         clientID: config.facebook.clientID,
         clientSecret: config.facebook.clientSecret,
-        callbackURL: config.facebook.callbackURL
-    },
+        callbackURL: config.facebook.callbackURL,
+        profileFields: ['id', 'displayName', 'name', 'gender', 'picture.type(large)']
+
+},
     function(accessToken, refreshToken, profile, done) {
         User.findOne({ oauthID: profile.id }, function(err, user) {
             if(err) {
@@ -19,6 +21,7 @@ module.exports = passport.use(new FacebookStrategy({
                 user = new User({
                     oauthID: profile.id,
                     name: profile.displayName,
+                    picture: profile.photos ? profile.photos[0].value : '/img/faces/unknown-user-pic.jpg',
                     created: Date.now()
                 });
                 user.save(function(err) {
