@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('home', { title: 'KV App' });
+  res.render('home', { title: 'Demo or die' });
 });
 
 router.get('/login', function (req, res, next) {
@@ -27,7 +27,7 @@ router.get('/adminView', function (req, res, next) {
 });
 
 router.get('/adminlogin', function(req, res, next) {
-  res.render('adminlogin', { title: 'KV App | Admin Log In' });
+  res.render('adminlogin', { title: 'Demo or die | Admin Log In' });
 });
 
 
