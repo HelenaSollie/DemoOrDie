@@ -348,7 +348,17 @@ nav {
 
 .allInfo p {
 
+<<<<<<< HEAD
     font-size: 2em;
     color: white;
 
 }
+=======
+    width: 50%;
+    margin-left: 25%;
+    font-size: 1.5em;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+>>>>>>> 6160390dbff22983e07e69d2fb2688204a9d9f46
