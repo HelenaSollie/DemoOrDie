@@ -2,3 +2,7 @@ extends layout
 
 block content
     h2 Admin view
+    h3 Wachtwoord ingeven om te checken om te bevestigen dat het wel degelijk een teacher is
+    form(method="post" action="/adminProfile")
+        input#check-input(type="text" name="check" value="")
+        button#btn-check Send
