@@ -181,46 +181,13 @@ nav {
     margin-left: 25%;
 }
 
-.linksProfile form {
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.linksProfile form label {
-
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: white;
-}
-
-.linksProfile form button {
-    color: #ed9aa9;
-    background-color: white;
-    padding: 2%;
-    width: 45%;
-    border: 1px solid transparent;
-    font-size: 1.5em;
-    margin-top: 20px;
-    text-decoration: none;
-    border-radius: 10px;
-    margin-bottom: 50px;
-
-}
-
-.linksProfile input {
-
-    width: 40px;
-    height: 40px;
-}
 .linkProfile {
 
     color: #ed9aa9;
     padding: 2%;
     font-size:1.5em;
     text-align: center;
-
 }
 
 #linkTryAgain {
@@ -228,8 +195,6 @@ nav {
     text-align: center;
     color: white;
     background-color: #ed9aa9;
-    margin-left: 39%;
-    margin-top: 50px;
 }
 
 /* choosegroups.pug */
@@ -470,7 +435,6 @@ nav {
 
 .profileInfo img {
 
-    margin-left: 30%;
 }
 
 .adminLogin h1 {

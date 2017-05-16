@@ -10,11 +10,6 @@ block content
             p#welcomeProfile Hello, #{user.name} !
             img#welcomeProfileImage(src= user.picture)
             div.linksProfile
-                form(method="POST" action="")
-                        label I'm a teacher
-                        input(type='checkbox' value='teacher' name='teacher')
-                        label I'm a student
-                        input(type='checkbox' value='student' name='student')
-                        button(type='submit') Go!
-
-            a#linkTryAgain(href="/login") That's not me!
+                a.linkProfile(id="student" href="/profile") I'm a student
+                a.linkProfile(id="teacher" href="/adminView") I'm a teacher
+                a#linkTryAgain(href="/login") That's not me!

@@ -109,7 +109,7 @@ app.post('/home', function(req, res) {
 
     TeacherStudent.save(function (err, doc) {
         if (err) res.json(err);
-        else    res.redirect('/chooseGroups');
+        else    res.redirect('/profile');
     });
 
 });
