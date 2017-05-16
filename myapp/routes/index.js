@@ -8,7 +8,7 @@ router.get('/chooseGroups', require('connect-ensure-login').ensureLoggedIn(), fu
 });
 
 router.get('/adminView', require('connect-ensure-login').ensureLoggedIn(), function (req, res, next) {
-    router.post('/adminProfile',function(req,res){
+    router.post('/adminView',function(req,res){
         var test = req.body.check;
         if (test != "soren"){
             console.log("yes");
