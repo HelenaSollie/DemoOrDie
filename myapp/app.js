@@ -11,6 +11,8 @@ var fbAuth = require('./authentication.js');
 
 var User = require('./user.js');
 var Vakken = require('./vakken.js');
+var TeacherStudent = require('./teacherstudent.js');
+
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://127.0.0.1/demoordie');
 
@@ -65,6 +67,14 @@ app.get('/vote', require('connect-ensure-login').ensureLoggedIn(), function(req,
     res.render('vote', { user: req.user });
 });
 
+app.get('/adminView', require('connect-ensure-login').ensureLoggedIn(), function(req, res){
+    res.render('adminview', { user: req.user });
+});
+
+app.get('/adminProfile', require('connect-ensure-login').ensureLoggedIn(), function(req, res){
+    res.render('adminprofile', { user: req.user });
+});
+
 app.get('/login/facebook', passport.authenticate('facebook'));
 
 app.get('/login/facebook/return', passport.authenticate('facebook', { failureRedirect: '/login' }), function(req, res) {
@@ -87,6 +97,21 @@ app.post('/chooseGroups', function (req, res) {
         if (err) res.json(err);
         else    res.redirect('/profile');
     });
+});
+
+app.post('/home', function(req, res) {
+
+    var TeacherStudent = new TeacherStudent({
+        student: req.body.student,
+        teacher: req.body.teacher,
+        userid: req.user.oauthID
+    });
+
+    TeacherStudent.save(function (err, doc) {
+        if (err) res.json(err);
+        else    res.redirect('/chooseGroups');
+    });
+
 });
 
 

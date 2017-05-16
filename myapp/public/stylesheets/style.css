@@ -181,12 +181,46 @@ nav {
     margin-left: 25%;
 }
 
+.linksProfile form {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.linksProfile form label {
+
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.linksProfile form button {
+    color: #ed9aa9;
+    background-color: white;
+    padding: 2%;
+    width: 45%;
+    border: 1px solid transparent;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-bottom: 50px;
+
+}
+
+.linksProfile input {
+
+    width: 40px;
+    height: 40px;
+}
 .linkProfile {
 
     color: #ed9aa9;
     padding: 2%;
     font-size:1.5em;
     text-align: center;
+
 }
 
 #linkTryAgain {
@@ -194,6 +228,8 @@ nav {
     text-align: center;
     color: white;
     background-color: #ed9aa9;
+    margin-left: 39%;
+    margin-top: 50px;
 }
 
 /* choosegroups.pug */
@@ -414,3 +450,70 @@ nav {
 
     font-size: 1.5em;
 }
+
+/* adminView.pug */
+
+.adminInfo {
+
+    width: 80%;
+    height: 100vh;
+    margin-left: 10%;
+    background-color: white;
+    padding-top: 100px;
+}
+
+.adminInfo p {
+
+    color: #86E2D5;
+    font-size: 2em;
+}
+
+.profileInfo img {
+
+    margin-left: 30%;
+}
+
+.adminLogin h1 {
+
+    font-size: 1.2em;
+    color: darkgrey;
+    text-transform: none;
+}
+
+.adminLogin form {
+
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.adminLogin form input {
+
+    padding: 3%;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid darkgrey;
+    margin-top: 20px;
+}
+
+.adminLogin form input::-webkit-input-placeholder {
+
+    color: #ed9aa9;
+    font-size: 1em;
+
+}
+.adminLogin form #btn-check {
+
+    background-color: #ed9aa9;
+    color: white;
+    border: 1px solid transparent;
+    padding: 2%;
+    border-radius: 10px;
+    font-size:1.5em;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
