@@ -305,7 +305,12 @@ nav {
     color: #86E2D5;
     font-size: 2em;
 }
-
+.btn-vak{
+     display: block;
+ }
+.hide{
+     display: none;
+ }
 .profileInfo2 {
 
     display: flex;
