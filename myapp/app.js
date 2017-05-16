@@ -79,7 +79,7 @@ app.get('/login/facebook/return', passport.authenticate('facebook', { failureRed
 app.get('/profile', require('connect-ensure-login').ensureLoggedIn(), function(req, res){
     res.render('profile', { user: req.user });
 });
-<<<<<<< HEAD
+
 
 app.post('/chooseGroups', function(req, vakken){
     vakken = new Vakken ({
@@ -91,7 +91,7 @@ app.post('/chooseGroups', function(req, vakken){
     vakken.save(function(err, doc){
         if(err) res.json(err);
         else    res.redirect('/profile'); done(null, vakken);
-=======
+
 app.post('/chooseGroups', function (req, res) {
         var vakken = new Vakken({
             php: req.body.php,
@@ -103,7 +103,7 @@ app.post('/chooseGroups', function (req, res) {
             if (err) res.json(err);
             else    res.redirect('/profile');
         });
->>>>>>> 4beb05a9d7e0fbe8e4020ed7c1593b0deec073f9
+
     });
 
 app.use(logger('dev'));
