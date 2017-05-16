@@ -15,9 +15,5 @@ router.get('/adminView', function (req, res, next) {
     res.render('adminView');
 });
 
-router.get('/adminlogin', function(req, res, next) {
-  res.render('adminlogin', { title: 'Demo or die | Admin Log In' });
-});
-
 
 module.exports = router;
