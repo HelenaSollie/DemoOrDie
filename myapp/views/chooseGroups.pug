@@ -10,13 +10,14 @@ block content
             div.pickGroups
                 h1 Pick your groups
                 div.allGroups
-                    form
+                    form(method="POST" action="")
                         label PHP
-                        input(type='checkbox' value='php')
+                        input(type='checkbox' value='php' name='php')
                         label WEBTECH
-                        input(type='checkbox' value='webtech')
+                        input(type='checkbox' value='webtech' name='webtech')
                         label PROJECT
-                        input(type='checkbox' value='project')
+                        input(type='checkbox' value='project' name='project')
+                        button.login-btn(type='submit') Save
 
             div.linksProfile
                 a.linkProfile(href="/profile") Go!

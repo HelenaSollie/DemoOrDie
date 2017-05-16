@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var passport = require('passport');
 var fbAuth = require('./authentication.js');
 var User = require('./user.js');
-var Vak = require('./vakken.js');
+var Vakken = require('./vakken.js');
 var mongoose = require('mongoose');
 var config = require('./oauth.js')
 
@@ -62,19 +62,18 @@ app.get('/login/facebook/return', passport.authenticate('facebook', { failureRed
 app.get('/profile', require('connect-ensure-login').ensureLoggedIn(), function(req, res){
     res.render('profile', { user: req.user });
 });
-
-app.post('/chooseGroups', function(req, vakken){
-    vakken = new Vakken({
-        php: req.body.php,
-        webtech: req.body.webtech,
-        project: req.body.project,
-        userid: profile.id
+app.post('/chooseGroups', function (req, res) {
+        var vakken = new Vakken({
+            php: req.body.php,
+            webtech: req.body.webtech,
+            project: req.body.project,
+            userid: req.user.oauthID //hier moet profile id komen
+        });
+        vakken.save(function (err, doc) {
+            if (err) res.json(err);
+            else    res.redirect('/profile');
+        });
     });
-    vakken.save(function(err, doc){
-        if(err) res.json(err);
-        else    res.redirect('/profile'); done(null, vakken);
-    });
-});
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
