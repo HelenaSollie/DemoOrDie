@@ -6,7 +6,7 @@
     height: 100vh;
     margin: 0 auto;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    background-color: #86E2D5 ;
+    background-color: #A2DED0;
     margin-top: -120px;
 }
 
@@ -181,6 +181,7 @@ nav {
     margin-left: 25%;
 }
 
+
 .linkProfile {
 
     color: #ed9aa9;
@@ -224,6 +225,21 @@ nav {
 .allGroups form input {
     margin-top: 20px;
     margin-bottom: 50px;
+}
+
+.allGroups form button {
+
+    color: #ed9aa9;
+    background-color: white;
+    padding: 2%;
+    width: 70%;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 1px solid transparent;
+
+
 }
 
 /*  profile.pug */
@@ -298,12 +314,7 @@ nav {
     width: 80%;
     margin-left: 10%;
 }
-.btn-vak{
-    display: block;
-}
-.hide{
-    display: none;
-}
+
 .groupInfo {
     height: auto;
     margin-top: 50px;
@@ -358,4 +369,115 @@ nav {
     padding-top: 10px;
     padding-bottom: 50px;
 }
+
+/* vote.pug */
+
+.voteButtons {
+
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 50px;
+}
+
+.voteButtons button {
+
+    padding: 5%;
+    border: 1px solid transparent;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.8em;
+    border-radius: 10px;
+}
+
+.voteButtons #demo {
+
+    background-color: #86E2D5;
+}
+
+.voteButtons #die {
+
+    background-color: #ed9aa9;
+}
+
+.nameCandidate {
+
+    background-color: white;
+    width: 80%;
+    margin-left: 10%;
+    padding-top: 80px;
+    padding-bottom: 180px;
+
+}
+
+.nameCandidate p {
+
+    font-size: 1.5em;
+}
+
+/* adminView.pug */
+
+.adminInfo {
+
+    width: 80%;
+    height: 100vh;
+    margin-left: 10%;
+    background-color: white;
+    padding-top: 100px;
+}
+
+.adminInfo p {
+
+    color: #86E2D5;
+    font-size: 2em;
+}
+
+.profileInfo img {
+
+}
+
+.adminLogin h1 {
+
+    font-size: 1.2em;
+    color: darkgrey;
+    text-transform: none;
+}
+
+.adminLogin form {
+
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.adminLogin form input {
+
+    padding: 3%;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid darkgrey;
+    margin-top: 20px;
+}
+
+.adminLogin form input::-webkit-input-placeholder {
+
+    color: #ed9aa9;
+    font-size: 1em;
+
+}
+.adminLogin form #btn-check {
+
+    background-color: #ed9aa9;
+    color: white;
+    border: 1px solid transparent;
+    padding: 2%;
+    border-radius: 10px;
+    font-size:1.5em;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
 

@@ -1,8 +1,16 @@
 extends layout
 
 block content
-    h2 Admin view
-    h3 Wachtwoord ingeven om te checken om te bevestigen dat het wel degelijk een teacher is
-    form(method="post" action="")
-        input#check-input(type="text" name="check" value="")
-        button#btn-check Send
+    div.container
+        div.adminInfo
+            p #{user.name}
+
+            div.profileInfo
+
+                img(src= user.picture)
+
+            div.adminLogin
+                h1 Fill in the password to get access to the adminconsole.
+                form(method="post" action="")
+                    input(type="text" name="check" value="" placeholder="Fill in your password")
+                    button#btn-check Send

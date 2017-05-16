@@ -1,4 +1,26 @@
 extends layout
 
 block content
-    h2 Vote
+    div.container
+            div.profileInfo
+                p 3 ... 2 ... 1 ... Vote!
+
+                div.voteResults
+                    div#demoResult
+                        p 50%
+
+                    img(src= user.picture)
+
+                    div#dieResult
+                        p 50%
+
+
+            div.nameCandidate
+                p  Vote for #{user.name} !
+
+                div.voteButtons
+                    button#demo  Demo
+                    p or
+                    button#die   Die
+
+
