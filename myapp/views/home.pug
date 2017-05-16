@@ -8,7 +8,8 @@ block content
                 a#startBtn(href="/login") Get started
         else
             p#welcomeProfile Hello, #{user.name} !
-            
-            div#linksProfile
-            a#linkProfile(href="/profile") Go to profile
-            a#linkTryAgain(href="/login") That's not me!
+            img#welcomeProfileImage(src= user.picture)
+            div.linksProfile
+                a#linkProfile(href="/profile") I'm a student
+                a#linkProfile(href="/adminView") I'm a teacher
+                a#linkTryAgain(href="/login") That's not me!
