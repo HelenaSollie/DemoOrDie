@@ -63,7 +63,7 @@ app.get('/profile', require('connect-ensure-login').ensureLoggedIn(), function(r
     res.render('profile', { user: req.user });
 });
 app.post('/chooseGroups', function (req, res) {
-        var vakken = new Vakken({
+        vakken = new Vakken({
             php: req.body.php,
             webtech: req.body.webtech,
             project: req.body.project,

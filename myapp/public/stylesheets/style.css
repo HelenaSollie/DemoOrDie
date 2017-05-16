@@ -298,7 +298,12 @@ nav {
     width: 80%;
     margin-left: 10%;
 }
-
+.btn-vak{
+    display: block;
+}
+.hide{
+    display: none;
+}
 .groupInfo {
     height: auto;
     margin-top: 50px;
