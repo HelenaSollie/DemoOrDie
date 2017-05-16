@@ -10,12 +10,7 @@ var passport = require('passport');
 var fbAuth = require('./authentication.js');
 
 var User = require('./user.js');
-<<<<<<< HEAD
-var Vak = require('./vakken.js');
-
-=======
 var Vakken = require('./vakken.js');
->>>>>>> 4beb05a9d7e0fbe8e4020ed7c1593b0deec073f9
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://127.0.0.1/demoordie');
 
@@ -81,30 +76,19 @@ app.get('/profile', require('connect-ensure-login').ensureLoggedIn(), function(r
 });
 
 
-app.post('/chooseGroups', function(req, vakken){
-    vakken = new Vakken ({
+app.post('/chooseGroups', function (req, res) {
+    var vakken = new Vakken({
         php: req.body.php,
         webtech: req.body.webtech,
         project: req.body.project,
-        userid: profile.id
+        userid: req.user.oauthID //hier moet profile id komen
     });
-    vakken.save(function(err, doc){
-        if(err) res.json(err);
-        else    res.redirect('/profile'); done(null, vakken);
-
-app.post('/chooseGroups', function (req, res) {
-        var vakken = new Vakken({
-            php: req.body.php,
-            webtech: req.body.webtech,
-            project: req.body.project,
-            userid: req.user.oauthID //hier moet profile id komen
-        });
-        vakken.save(function (err, doc) {
-            if (err) res.json(err);
-            else    res.redirect('/profile');
-        });
-
+    vakken.save(function (err, doc) {
+        if (err) res.json(err);
+        else    res.redirect('/profile');
     });
+});
+
 
 app.use(logger('dev'));
 app.use(bodyParser.json());

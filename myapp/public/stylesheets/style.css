@@ -226,6 +226,21 @@ nav {
     margin-bottom: 50px;
 }
 
+.allGroups form button {
+
+    color: #ed9aa9;
+    background-color: white;
+    padding: 2%;
+    width: 70%;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 1px solid transparent;
+
+
+}
+
 /*  profile.pug */
 
 .profileInfo {
