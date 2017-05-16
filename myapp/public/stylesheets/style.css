@@ -196,6 +196,25 @@ nav {
     background-color: #ed9aa9;
 }
 
+/* choosegroups.pug */
+
+.pickGroups h1 {
+
+    font-size: 1.5em;
+}
+
+.allGroups form{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin-left: 25%;
+
+}
+
+/*  profile.pug */
+
 .profileInfo {
     width: 100%;
     height: auto;
@@ -204,8 +223,11 @@ nav {
 
 .profileInfo img {
 
-    width: 50%;
-    margin-left: 25%;
+    width: 200px;
+    height: 200px;
+    margin-left: 37.5%;
+    border-radius: 100px;
+    z-index: -1;
 }
 
 .profileInfo p {
@@ -213,6 +235,7 @@ nav {
     padding-top: 100px;
     color: white;
     font-size: 2em;
+    z-index: 2;
 }
 
 .groupInfo {
@@ -224,6 +247,7 @@ nav {
     justify-content: space-between;
     width: 50%;
     margin-left: 25%;
+    margin-top: 100px;
 }
 
 .groupInfo h1 {

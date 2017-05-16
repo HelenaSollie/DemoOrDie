@@ -1,4 +1,22 @@
 extends layout
 
 block content
-    h2 Choose groups
+    div.container
+        if (!user)
+            h1 Demo or Die
+            div
+                a#startBtn(href="/login") Get started
+        else
+            div.pickGroups
+                h1 Pick your groups
+                div.allGroups
+                    form
+                        label PHP
+                        input(type='checkbox' value='php')
+                        label WEBTECH
+                        input(type='checkbox' value='webtech')
+                        label PROJECT
+                        input(type='checkbox' value='project')
+
+            div.linksProfile
+                a.linkProfile(href="/profile") Go!

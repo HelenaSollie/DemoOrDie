@@ -2,7 +2,17 @@ extends layout
 
 block content
     div.container
-        h1= title
+        div.profileInfo
+            p #{user.name}
+            img(src= user.picture)
 
-        img(src= user.picture)
-        p #{user.name}
+        div.groupInfo
+            h1 In groups
+            p ADD GROUPS
+
+        div.demoInfo
+            h1 Last time on stage
+            p
+
+        div.allInfo
+            p Wow, you're at ... demo and only ... die. You can bring up your ranking to 85% demo if you nail the next one!
