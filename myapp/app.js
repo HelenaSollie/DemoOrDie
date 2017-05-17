@@ -1,14 +1,18 @@
 var express = require('express');
 var path = require('path');
+
 var favicon = require('serve-favicon');
 var logger = require('morgan');
+
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var passport = require('passport');
 var fbAuth = require('./authentication.js');
+
 var User = require('./user.js');
 var Vakken = require('./vakken.js');
 var teacherstudent = require('./teacherstudent.js');
+
 var mongoose = require('mongoose');
 var config = require('./oauth.js');
 
@@ -54,9 +58,11 @@ app.get('/adminView', require('connect-ensure-login').ensureLoggedIn(), function
     res.render('adminview', { user: req.user });
 });
 
-app.get('/adminProfile', require('connect-ensure-login').ensureLoggedIn(), function(req, res){
-    res.render('adminprofile', { user: req.user });
+app.get('/adminConsole', require('connect-ensure-login').ensureLoggedIn(), function(req, res){
+    res.render('adminview', { user: req.user });
 });
+
+
 app.get('/', function(req, res) {
     res.render('home', { user: req.user });
 });
@@ -88,7 +94,7 @@ app.post('/chooseGroups', function (req, res) {
 });
 
 
-app.post('/home', function(req, res) {
+/*app.post('/home', function(req, res) {
 
     teacherstudent = new TeacherStudent({
         student: req.body.student,
@@ -101,7 +107,8 @@ app.post('/home', function(req, res) {
         else    res.redirect('/profile');
     });
 
-});
+});*/
+
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -111,6 +118,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 
 // catch 404 and forward to error handler
+
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;
@@ -118,6 +126,7 @@ app.use(function(req, res, next) {
 });
 
 // error handler
+
 app.use(function(err, req, res, next) {
     // set locals, only providing error in development
     res.locals.message = err.message;
