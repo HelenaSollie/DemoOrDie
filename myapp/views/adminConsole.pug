@@ -3,7 +3,9 @@ extends layout
 block content
     div.container
         div.adminConsole
-            p #{user.name}
+            if users
+                each user in users
+                    p = user.name
 
 
     script(src='/primus/primus.js')
