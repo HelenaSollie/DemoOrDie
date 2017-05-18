@@ -150,7 +150,7 @@ app.post('/chooseGroups', function (req, res) {
         else    res.redirect('/profile');
     });
 
-});*/
+});
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
