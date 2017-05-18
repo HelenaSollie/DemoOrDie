@@ -78,11 +78,15 @@ app.get('/adminView', require('connect-ensure-login').ensureLoggedIn(), function
     });
 });
 
+<<<<<<< HEAD
 app.get('/adminConsole', require('connect-ensure-login').ensureLoggedIn(), function(req, res){
     users.find({role:'student'}, function(err,user){
         res.render('adminconsole', { user: req.user })
     });
 });
+=======
+
+>>>>>>> cf4730828264fafaae89a760e48d984cd95af337
 
 app.get('/', function(req, res) {
     res.render('home', { user: req.user });
