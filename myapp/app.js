@@ -58,11 +58,7 @@ app.get('/adminView', require('connect-ensure-login').ensureLoggedIn(), function
     res.render('adminview', { user: req.user });
 });
 
-app.get('/adminConsole', require('connect-ensure-login').ensureLoggedIn(), function(req, res){
-    users.find(function(err, users) {
-        res.render('adminconsole', {user: req.user, users: users});
-    });
-});
+
 
 
 app.get('/', function(req, res) {

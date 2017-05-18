@@ -12,8 +12,8 @@ block content
             div.adminLogin
                 h1 Fill in the password to get access to the adminconsole.
                 form(method="post" action="")
-                    input(type="text" name="check" value="" placeholder="Fill in your password")
-                    a#btnAdminPw(href='') Send
+                    input(type="text" name="check" value="" id="check-input" placeholder="Fill in your password")
+                    a#btnAdminPw(href='/vote') Send
 
     script(src='/primus/primus.js')
-    script(src='javascripts/teacherCheck.js')
+    script(src='/javascripts/teacherCheck.js')
