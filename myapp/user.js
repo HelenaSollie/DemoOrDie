@@ -6,6 +6,7 @@ var User = mongoose.model('User', {
     name: String,
     picture: String,
     photo: String,
+    typePersoon: String,
     created: Date
 });
 

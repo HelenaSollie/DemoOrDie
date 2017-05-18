@@ -22,6 +22,7 @@ module.exports = passport.use(new FacebookStrategy({
                     oauthID: profile.id,
                     name: profile.displayName,
                     picture: profile.photos ? profile.photos[0].value : '/img/faces/unknown-user-pic.jpg',
+                    typePersoon: "",
                     created: Date.now()
                 });
                 user.save(function(err) {
