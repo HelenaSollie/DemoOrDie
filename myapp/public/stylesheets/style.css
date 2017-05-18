@@ -399,6 +399,7 @@ nav {
 .voteButtons #demo {
 
     background-color: #86E2D5;
+
 }
 
 .voteButtons #die {
@@ -430,6 +431,8 @@ nav {
     margin-left: 10%;
     background-color: white;
     padding-top: 100px;
+    display: flex;
+    flex-direction: column;
 }
 
 .adminInfo p {
@@ -438,7 +441,12 @@ nav {
     font-size: 2em;
 }
 
-.profileInfo img {
+.adminPhoto img {
+
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    margin-left: 33%;
 
 }
 
@@ -472,7 +480,7 @@ nav {
     font-size: 1em;
 
 }
-.adminLogin form #btn-check {
+.adminLogin form a {
 
     background-color: #ed9aa9;
     color: white;
@@ -482,7 +490,19 @@ nav {
     font-size:1.5em;
     text-align: center;
     margin-top: 20px;
+
 }
 
+/* Adminconsole */
 
+.adminConsole {
+
+    width: 80%;
+    height: 100vh;
+    margin-left: 10%;
+    background-color: white;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
 

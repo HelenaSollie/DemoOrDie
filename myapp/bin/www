@@ -20,6 +20,18 @@ app.set('port', port);
  */
 
 var server = http.createServer(app);
+var Primus = require('primus');
+var primus = new Primus(server);
+
+primus.on('connection', function(spark){
+    console.log('spark connected');
+    spark.write('hello connection');
+
+    spark.on('data', function(data){
+        console.log(data);
+        primus.write(data);
+    });
+});
 
 /**
  * Listen on provided port, on all network interfaces.

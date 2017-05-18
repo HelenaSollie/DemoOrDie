@@ -7,12 +7,12 @@ block content
 
                 div.voteResults
                     div#demoResult
-                        p 50%
+                        p#votingDemo
 
                     img(src= user.picture)
 
                     div#dieResult
-                        p 50%
+                        p#votingDie
 
 
             div.nameCandidate
@@ -24,3 +24,5 @@ block content
                     button#die   Die
 
 
+    script(src='/primus/primus.js')
+    script(src='javascripts/vote.js')

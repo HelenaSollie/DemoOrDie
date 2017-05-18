@@ -6,12 +6,12 @@ block content
             p #{user.name}
             div.voteResults
                 div#demoResult
-                    p 50%
+                    p#votingDemo
 
                 img(src= user.picture)
 
                 div#dieResult
-                    p 50%
+                    p#votingDie
 
         div.profileInfo2
             div.groupInfo
@@ -39,3 +39,6 @@ block content
 
         div.linksProfile
             a.linkProfile(href="/vote") Let's vote!
+
+    script(src='/primus/primus.js')
+    script(src='javascripts/vote.js')
