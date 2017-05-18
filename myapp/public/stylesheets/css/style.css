@@ -1,3 +1,7 @@
+
+
+/*# sourceMappingURL=style.css.map */
+
 .container {
     display: block;
     min-width:300px;
@@ -306,11 +310,11 @@ nav {
     font-size: 2em;
 }
 .btn-vak{
-     display: block;
- }
+    display: block;
+}
 .hide{
-     display: none;
- }
+    display: none;
+}
 .profileInfo2 {
 
     display: flex;
@@ -505,4 +509,5 @@ nav {
     display: flex;
     flex-direction: column;
 }
+
 
