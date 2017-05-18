@@ -137,7 +137,6 @@ app.post('/chooseGroups', function (req, res) {
 });
 
 
-/*app.post('/home', function(req, res) {
 
     teacherstudent = new TeacherStudent({
         student: req.body.student,
