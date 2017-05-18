@@ -12,7 +12,7 @@ $(document).ready(function(){
         console.log(data);
     });
 
-    document.querySelector(".btn__startvote").addEventListener("click", function(e) {
+    document.querySelector("#voteBtn").addEventListener("click", function(e) {
         var ids = [];
         $('.users a.profileLink').each(function () {
             var href = $(this).attr('href');
