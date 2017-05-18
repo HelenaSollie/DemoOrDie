@@ -23,5 +23,10 @@
     "pug": "~2.0.0-beta11",
     "serve-favicon": "~2.4.2",
     "ws": "^3.0.0"
+  },
+  "devDependencies": {
+    "gulp-clean-css": "^3.3.1",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-sass": "^3.1.0"
   }
 }
