@@ -56,37 +56,7 @@ app.get('/vote', require('connect-ensure-login').ensureLoggedIn(), function(req,
 
 app.get('/adminView', require('connect-ensure-login').ensureLoggedIn(), function(req, res){
     res.render('adminview', { user: req.user });
-    // This would likely be inside of a PUT request, since we're updating an existing document, hence the req.params.todoId.
-    // Find the existing resource by ID
-    User.findById(req.user._id, function (err, user) {
-        // Handle any possible database errors
-        if (err) {
-            res.status(500).send(err);
-        } else {
-            // Update each attribute with any possible attribute that may have been submitted in the body of the request
-            // If that attribute isn't in the request body, default back to whatever it was before.
-            user.typePersoon = "teacher"
-
-            // Save the updated document back to the database
-            user.save(function (err, user) {
-                if (err) {
-                    res.status(500).send(err)
-                }
-                res.send(user);
-            });
-        }
-    });
 });
-
-<<<<<<< HEAD
-app.get('/adminConsole', require('connect-ensure-login').ensureLoggedIn(), function(req, res){
-    users.find({role:'student'}, function(err,user){
-        res.render('adminconsole', { user: req.user })
-    });
-});
-=======
-
->>>>>>> cf4730828264fafaae89a760e48d984cd95af337
 
 app.get('/', function(req, res) {
     res.render('home', { user: req.user });
@@ -116,31 +86,16 @@ app.post('/chooseGroups', function (req, res) {
         if (err) res.json(err);
         else    res.redirect('/profile');
     });
+});
 
-
-// This would likely be inside of a PUT request, since we're updating an existing document, hence the req.params.todoId.
-// Find the existing resource by ID
-    User.findById(req.user._id, function (err, user) {
-        // Handle any possible database errors
-        if (err) {
-            res.status(500).send(err);
-        } else {
-            // Update each attribute with any possible attribute that may have been submitted in the body of the request
-            // If that attribute isn't in the request body, default back to whatever it was before.
-            user.typePersoon = "student"
-
-            // Save the updated document back to the database
-            user.save(function (err, user) {
-                if (err) {
-                    res.status(500).send(err)
-                }
-                res.send(user);
-            });
-        }
+app.get('/adminConsole', require('connect-ensure-login').ensureLoggedIn(), function(req, res){
+    User.find({role:'student'}, function(err,user){
+        res.render('adminconsole', { user: req.user })
     });
 });
 
 
+app.post('/home', function(req, res) {
 
     teacherstudent = new TeacherStudent({
         student: req.body.student,
